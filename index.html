@@ -5,11 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Link</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 1rem;
+        }
+
+        .home,
+        main  {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main .container {
+            width: 200px;
+            height: max-content;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        input,button {
+            flex: 1 1 100%;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <section class="home">
         <main>
-            <div class="contaner">
+            <div class="container">
                 <input type="text" class="inputUrl" id="inputUrl" placeholder="masukan URL">
                 <button class="downloadBtn" id="downloadBtn">Download</button>
             </div>
