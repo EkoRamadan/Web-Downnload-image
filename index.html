@@ -170,7 +170,7 @@
 
         downloadBtn.addEventListener("click", async () => {
             try{
-                const response = await fetch(inputUrl);
+                const response = await fetch(inputUrl.value);
                 const file = await response.blob();
                 const link = document.createElement("a");
                 link.href = URL.createObjectURL(file);
