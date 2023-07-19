@@ -170,13 +170,15 @@
 
         downloadBtn.addEventListener("click", async () => {
             try{
-                const response = await fecth(inputUrl);
+                const response = await fetch(inputUrl);
                 const file = await response.blob();
                 const link = document.createElement("a");
-                link.download = new date().getTime();
+                link.href = URL.createObjectURL(file);
+                link.download = new Date().getTime();
                 link.click();
             }catch(error){
                 alert("failed to download file!");
+                alert(error);
             }
         })
     </script>
